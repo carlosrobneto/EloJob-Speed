@@ -1,0 +1,220 @@
+{% extends "index.html" %}
+
+{% block titulo %} Contas Smurfs {% endblock %}
+
+{% block conteudo %}
+<div class="m-Img" style="color: white;">
+    <h1 class="sobreTxt"> Bem vindo a pagina de EloJob LoL</h1>
+    <h4 class="sobreTxt"> Escolha o elo atual e o que deseja atingir</h4>
+</div>
+
+<div style="background-color: white;">
+    <div class="container">
+        <div class="d-flex justify-content-evenly pt-3">
+            <div class="card border-info" style="width: 18rem;">
+                <div class="card-header text-center border-info">Seu Elo Atual</div>
+                <div class="card-body">
+                    <img id="imgEloAtual" src="" class="card-img-top" alt="alguma imagem">
+                    <select id="selEloAtual" onchange="getEloData('Atual')"
+                        class="form-select form-select-lg mb-3 border-info" aria-label=".form-select-lg example">
+                        {% for elo in elos %}
+                        <option value="{{ elo }}">{{ elo }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="selDivAtual" onchange="getDivData('Atual')"
+                        class="form-select form-select-sm border-info" aria-label=".form-select-sm example">
+
+                    </select>
+                </div>
+            </div>
+            <div class="card border-info" style="width: 18rem;">
+                <div class="card-header text-center border-info">Seu Elo Desejado</div>
+                <div class="card-body">
+                    <img id="imgEloDes" src="" class="card-img-top" alt="alguma imagem">
+                    <select id="selEloDes" onchange="getEloData('Des')"
+                        class="form-select form-select-lg mb-3 border-info" aria-label=".form-select-lg example">
+                        {% for elo in elos %}
+                        <option value="{{ elo }}">{{ elo }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="selDivDes" onchange="getDivData('Des')" class="form-select form-select-sm border-info"
+                        aria-label=".form-select-sm example">
+                    </select>
+                </div>
+            </div>
+            <div class="card border-info">
+                <div class="card-header text-center border-info">Resumo do pedido</div>
+                <div class="card-body">
+                    <h4>Elos: <span id="resumoElos"></span></h4>
+                    <h5>Adicionais: <h6><span id="resumoAdicionais"></span></h6></h5>
+                </div>
+                <div class="card-footer text-center border-info">
+                    <h3>Total = <span id="custo"></span></h3>
+                    <button class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="card border-info">
+            <div class="card-header border-info">Opções Adicionais:</div>
+            <div class="card-body">
+                {% for adicional in adicionais %}
+                <div class="form-check">
+                    <input class="form-check-input" onclick="atualizaValor()" type="checkbox"
+                        value="{{ adicional['percent'] }}" id="check{{ adicional['cod'] }}">
+                    <label class="form-check-label" for="check{{ adicional['cod'] }}">
+                        {{ adicional['nome'] }} (+{{ adicional['percent'] }}%)
+                        <p>{{ adicional['descricao'] }}</p>
+                    </label>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 text-center">
+        <div class="card border-info">
+            <div class="card-header border-info">
+                <h2>Regras</h2>
+            </div>
+            <div class="card-body border-info">
+                <h5>* O Cliente não podera jogar Raqueadas (na fila do serviço solicitado) até
+                    que o serviço seja concluido</h5>
+                <h5>* O Cliente não podera entrar na conta no momento que o serviço estiver sendo realizado</h5>
+                <h5>* O prazo é de 1 dia por divisão mais um dia de garantia (quando não marcada a opção de "Entrega
+                    Suprema")
+                    mas normalmente o serviço é entregue antes deste 1 dia extra</h5>
+                <h5>* Caso esteja ganhando menos de 20 PDL e não tiver marcado a opção de MMR o serviço não sera
+                    iniciado
+                    e o cliente sera notificado para ver se o valor sera devolvido ou ele pagara o valor da taxa.</h5>
+                <h5>* É necessario ter terminado a MD10 para solicitar o serviço</h5>
+            </div>
+            <div class="card-footer border-info">
+                <h2>Alguma duvida?</h2>
+                <button class="btn btn-primary">Clique aqui e saiba mais</button>
+            </div>
+        </div>
+        <div class="pb-4"></div>
+    </div>
+</div>
+</div>
+<script>
+    var va = 0;
+    var vd = 0;
+    var pm = 0;
+    var add = 0;
+
+    getEloData('Atual');
+    getEloData('Des');
+
+    function getEloData(id) {
+        elElo = document.getElementById('selElo' + id);
+        fetch('ws-eloV/' + elElo.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheSelectDiv(data.divisoes, id);
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function getDivData(id) {
+        elElo = document.getElementById('selElo' + id);
+        elDiv = document.getElementById('selDiv' + id);
+        fetch('ws-eloV/' + elElo.value + '/' + elDiv.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function preencheValor(data, id) {
+        if (id === 'Des') {
+            //pegar valor do elo atual
+            vd = data.tempoGasto;
+        } else {
+            //pegar valor do elo desejado
+            va = data.tempoGasto;
+        }
+        //console.log(data);
+        //pegar a taxa
+        pm = data.valPorMinuto
+
+        atualizaValor();
+    }
+
+    function atualizaValor() {
+        //calcula (vd - va) * tax  
+        var total = (vd - va) * pm;
+        total = total * verificaCheckados();
+        if (total < 0) {
+            total = 0;
+        }
+        document.getElementById("custo").innerHTML = "R$ " + total.toFixed(2);
+
+
+        var eloAtual = document.getElementById('selEloAtual').value;
+        var divAtual = document.getElementById('selDivAtual').value;
+        var eloDes = document.getElementById('selEloDes').value;
+        var divDes = document.getElementById('selDivDes').value;
+
+        var elosResumo = eloAtual + ' ' + divAtual + ' ' + ' -> ' + eloDes + ' ' + divDes + ' ';
+        document.getElementById('resumoElos').textContent = elosResumo;
+
+
+        var adicionaisSelecionados = document.querySelectorAll('input[type=checkbox]:checked');
+        var adicionaisResumo = ' ';
+        for (var i = 0; i < adicionaisSelecionados.length; i++) {
+            var adicionalNome = adicionaisSelecionados[i].parentNode.textContent.trim().split('(')[0].trim();
+            adicionaisResumo += adicionalNome + '<br>';
+        }
+        adicionaisResumo = adicionaisResumo.slice(0, -2);
+        document.getElementById('resumoAdicionais').innerHTML = adicionaisResumo;
+
+
+
+    }
+
+    function preencheImg(img, id) {
+        el = document.getElementById('imgElo' + id);
+        el.src = img;
+    }
+
+    function preencheSelectDiv(divisoes, id) {
+        elDiv = document.getElementById('selDiv' + id);
+        elDiv.innerHTML = '';
+        for (let i = 0; i < divisoes.length; i++) {
+            elDiv.innerHTML += '<option value="' + divisoes[i] + '">' + divisoes[i] + '</option>';
+        }
+        if (divisoes.length == 1) {
+            elDiv.classList.add("d-none");
+        } else {
+            elDiv.classList.remove("d-none");
+        }
+    }
+
+    function verificaCheckados() {
+        var checks = document.querySelectorAll('input[type=checkbox]:checked');
+        var total = 1;
+        for (var i = 0; i < checks.length; i++) {
+            total += (parseFloat(checks[i].value) / 100);
+        }
+        return total;
+    }
+
+
+</script>
+{% endblock %}

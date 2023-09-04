@@ -1,0 +1,14 @@
+
+{% extends "index.html" %}
+
+{% block titulo %} Contas Smurfs {% endblock %}
+
+{% block conteudo %}
+<style>
+    :root {
+        --body-bg-img: url("{{ url_for('static', filename='img/zed.webp') }}");
+    }
+</style>
+<h1>Local separado para vendas de contas</h1>
+
+{% endblock %}

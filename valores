@@ -1,0 +1,63 @@
+League of Legends[
+
+    Elojob{
+        Ferro = 7
+        Bronze = 9
+        Prata = 11.75
+        Ouro = 15
+        Platina = 23
+        Diamante 4 -> Diamante 3 = R$ 65
+        Diamante 3 -> Diamante 2 = R$ 70
+        Diamante 2 -> Diamante 1 = R$ 75
+        Diamante 1 -> Mestre = R$ 98
+        Mestre -> Grão Mestre = R$ 470
+        Grão Mestre -> Desafiante = R$ 925
+    }
+
+    DuoBoost{
+        Ferro = 14
+        Bronze = 16
+        Prata = 19
+        Ouro = 23
+        Platina = 34
+        Diamante 4 -> Diamante 3 = 98
+        Diamante 3 -> Diamante 2 = 110
+        Diamante 2 -> Diamante 1 = 160
+        Diamante 1 -> Mestre = 245
+    }
+]
+
+
+
+
+
+
+Valorant [
+
+    Elojob{
+        Ferro = 5
+        Bronze = 6
+        Prata = 9
+        Ouro = 15
+        Platina = 20
+        Diamante = 40
+        Ascendente = 55
+        Imortal 1 -> Imortal 2 = 90
+        Imortal 2 -> Imortal 3 = 105
+        Imortal 3 -> Radiante = 220
+    }
+
+    DuoBoost{
+        Ferro = 8
+        Bronze = 9
+        Prata = 16
+        Ouro = 34
+        Platina = 55
+        Diamante = 90
+        Ascendente = 115
+        Imortal 1 -> Imortal 2 = 210
+        Imortal 2 -> Imortal 3 = 285
+        Imortal 3 -> Radiante = 305
+    }
+]
+

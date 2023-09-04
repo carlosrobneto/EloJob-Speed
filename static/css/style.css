@@ -1,0 +1,128 @@
+.navbar .nav-link {
+    color: white;
+}
+
+.navbar .nav-link.active {
+    color: rgb(0, 255, 242);
+    text-decoration: underline;
+}
+
+
+.sobreTitulo {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    right: 40%;
+    text-align: center;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+.card-home {
+    margin: 10px;
+    padding: 15px;
+    min-width: 345px;
+    border: .12rem solid rgba(0, 0, 0, 0.356);
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    max-height: 320px;
+    min-height: 260px;
+}
+
+.sobreTxt {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.card-sobre {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 340px;
+    max-height: 305px;
+    min-height: 250px;
+    margin: 10px;
+    padding: 15px;
+    border: .12rem solid rgba(0, 0, 0, 0.356);
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.spcTop {
+    margin-top: 40px;
+}
+
+exp-add {
+    font-weight: 500;
+    color: #414141;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-left: 18px;
+}
+
+.row-flash {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    border: .12rem solid rgba(0, 0, 0, 0.356);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.container-options{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    border: .12rem solid rgba(0, 0, 0, 0.356);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.row-total{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    border: .12rem solid rgba(0, 0, 0, 0.356);
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.rodape {
+    color: white;
+    background-color: rgb(48, 48, 48);
+    max-height: 400px;
+    min-height: 300px;
+}
+
+body {
+    background: var(--body-bg-img) no-repeat center center fixed;
+    background-size: cover;
+} 
+
+.m-Img {
+    margin-top: 15%;
+    margin-bottom: 21%;
+}
+
+.compra {
+    color: white;
+    background-color: rgb(55, 107, 204);
+    border-radius: 5px;
+    border-color: #414141;
+    
+}
+
+.valorCompra {
+    border-color: #414141;
+    border-radius: 10px;
+}
