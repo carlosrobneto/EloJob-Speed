@@ -1,0 +1,157 @@
+{
+    "valor_minuto": 0.1,
+    "elos": [
+        {
+            "liga": "Novato",
+            "ordem": 1,
+            "divisoes": [
+                {
+                    "nome": "1 Aula",
+                    "subordem": 1,
+                    "min": 250,
+                    "img": "/static/img/elos/Prata1.webp"
+                },
+                {
+                    "nome": "2 Aulas",
+                    "subordem": 2,
+                    "min": 500,
+                    "img": "/static/img/elos/Prata1.webp"
+                },
+                {
+                    "nome": "3 Aulas",
+                    "subordem": 3,
+                    "min": 750,
+                    "img": "/static/img/elos/Prata1.webp"
+                },
+                {
+                    "nome": "4 Aulas",
+                    "subordem": 4,
+                    "min": 1000,
+                    "img": "/static/img/elos/Prata1.webp"
+                },
+                {
+                    "nome": "5 Aulas",
+                    "subordem": 5,
+                    "min": 1200,
+                    "img": "/static/img/elos/Prata1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Intermediario",
+            "ordem": 2,
+            "divisoes": [
+                {
+                    "nome": "1 Aula",
+                    "subordem": 1,
+                    "min": 300,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "2 Aulas",
+                    "subordem": 2,
+                    "min": 600,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "3 Aulas",
+                    "subordem": 3,
+                    "min": 900,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "4 Aulas",
+                    "subordem": 4,
+                    "min": 1200,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "5 Aulas",
+                    "subordem": 5,
+                    "min": 1500,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Avançado",
+            "ordem": 3,
+            "divisoes": [
+                {
+                    "nome": "1 Aula",
+                    "subordem": 1,
+                    "min": 400,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "2 Aulas",
+                    "subordem": 2,
+                    "min": 800,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "3 Aulas",
+                    "subordem": 3,
+                    "min": 1200,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "4 Aulas",
+                    "subordem": 4,
+                    "min": 1600,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "5 Aulas",
+                    "subordem": 5,
+                    "min": 2000,
+                    "img": "/static/img/elos/Mestre.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Pró",
+            "ordem": 4,
+            "divisoes": [
+                {
+                    "nome": "1 Aula",
+                    "subordem": 1,
+                    "min": 1070,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "2 Aulas",
+                    "subordem": 2,
+                    "min": 2140,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "3 Aulas",
+                    "subordem": 3,
+                    "min": 3210,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "4 Aulas",
+                    "subordem": 4,
+                    "min": 4280,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "5 Aulas",
+                    "subordem": 5,
+                    "min": 5350,
+                    "img": "/static/img/elos/Desafiante.webp"
+                }
+            ]
+        }
+    ],
+    "adicionais": [
+        {
+            "cod": "vitExtra",
+            "nome": "Chame um Amigo",
+            "descricao": "Selecionando esta opção o coach sera dado para você e seu amigo juntos.",
+            "percent": 60
+        }
+    ]
+}

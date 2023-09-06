@@ -20,9 +20,41 @@ def discord():
 def contas():
     return render_template('contas.html')
 
-@app.route('/coach')
-def sobre():
-    return render_template('coach.html')
+@app.route('/lol/coach')
+def coachLol():
+    elosLol = jsonToVar("coach_lol")
+    ligas = []
+    for elos in elosLol["elos"]:
+        ligas.append(elos["liga"])
+    return render_template('/lol/coach.html', elos=ligas, adicionais=elosLol["adicionais"])
+
+@app.route('/lol/ws-elo-coach/<elo_selecionado>', defaults={'div_sel': ""})
+@app.route('/lol/ws-elo-coach/<elo_selecionado>/<div_sel>')
+def wscoach(elo_selecionado, div_sel):
+    elosLol = jsonToVar("coach_lol")
+    divs = []
+    img = ""
+    tempoGasto = 0
+    valPorMinuto = elosLol["valor_minuto"]
+    for elo in elosLol["elos"]:
+        if elo["liga"] == elo_selecionado:
+            for div in elo["divisoes"]:
+                divs.append(div["nome"])
+                if img == "": 
+                    if div_sel == "": 
+                        img = div["img"]
+                        tempoGasto = div["min"]
+                    elif div_sel == div["nome"]:
+                        img = div["img"]
+                        tempoGasto = div["min"]
+
+    return '{"divisoes":' + json.dumps(divs) + ',"img":"' + img + '", "tempoGasto":' + str(tempoGasto) + ', "valPorMinuto": ' + str(valPorMinuto) + '}'
+
+
+@app.route('/lol/ws-preco/<seu_elo>/<elo_desejado>')
+def wsPrecocoach(seu_elo, elo_desejado):
+    valor = 0
+    return '{"Valor":' + str(valor) + '}'
 
 
 

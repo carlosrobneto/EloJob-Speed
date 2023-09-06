@@ -1,0 +1,212 @@
+{% extends "index.html" %}
+
+{% block titulo %} Coach {% endblock %}
+
+{% block conteudo %}
+<div class="row text-center" style="color: white;">
+    <h1>Bem vindo aos serviços de Coaching</h1>
+</div>
+<div>
+    <div class="container">
+        <div class="d-flex justify-content-evenly pt-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">Seu ultimo Elo</div>
+                <div class="card-body">
+                    <img id="imgEloAtual" src="" class="card-img-top" alt="alguma imagem">
+                    <select id="selEloAtual" onchange="getEloData('Atual')"
+                        class="form-select form-select-lg mb-3 selecao-elo" aria-label=".form-select-lg example">
+                        {% for elo in elos %}
+                        <option value="{{ elo }}">{{ elo }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="selDivAtual" onchange="getDivData('Atual')"
+                        class="form-select form-select-sm selecao-elo" aria-label=".form-select-sm example">
+
+                    </select>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Resumo do pedido</div>
+                <div class="card-body">
+                    <h4>Elos: <span id="resumoElos"></span></h4>
+                    <h5>Adicionais:<br> <span id="resumoAdicionais"></span></h5>
+                </div>
+                <div class="card-footer text-center">
+                    <h3>Total = <span id="custo"></span></h3>
+                    <button class="button">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-header">Opções Adicionais:</div>
+            <div class="card-body">
+                <li><strong>Player Novato:</strong> Jogadores com pouca experiência em jogo, geralmente na divisão Ferro
+                    até o Prata, terão aulas com um Coach Mestre ou superior.
+                    <br>
+                    <b>Principais conteúdos abordados:</b> Principais campeões de cada rota, builds padrões, builds
+                    situacionais, fase de rotas, runas, utilização do mapa e farm.
+                </li><br>
+                <li><strong>Player Intermediário:</strong> Jogadores da divisão Ouro até o Esmeralda, terão aulas com um
+                    Coach Mestre ou superior.
+                    <br>
+                    <b>Principais conteúdos abordados:</b> Counter-picks, posicionamento e como jogar nas lutas, como
+                    jogar no late game, kiting, ganks, roaming, zoning, aspectos mentais, disputa de visão e objetivos
+                    globais.
+                </li><br>
+                <li><strong>Player Avançado:</strong> Jogadores da divisão Diamante até o Mestre, terão aulas com um
+                    Coach Challenger.
+                    <br>
+                    <b>Principais conteúdos abordados:</b> Controle de onda, como obter e distribuir vantagens entre sua
+                    equipe após vencer a lane, como jogar em desvantagem, mapeamento da selva inimiga, roaming avançado
+                    e muito mais.
+                </li><br>
+                <li><strong>Jogador Experiente:</strong> Times, terão aulas com um Coach experiente Challenger.
+                    <br>
+                    <b>Principais conteúdos abordados:</b> Como o IGL (In-Game Leader) deve se portar, quando o second
+                    caller atua, como executar composições de equipe, análise dos principais erros da equipe e como
+                    corrigi-los, entre outros tópicos.
+                </li><br>
+                <div class="card-footer">
+                    {% for adicional in adicionais %}
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="atualizaValor()" type="checkbox"
+                            value="{{ adicional['percent'] }}" id="check{{ adicional['cod'] }}">
+                        <label class="form-check-label" for="check{{ adicional['cod'] }}">
+                            {{ adicional['nome'] }} (+{{ adicional['percent'] }}%)
+                            <p>{{ adicional['descricao'] }}</p>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 text-center">
+        <div class="card">
+            <div class="card-header">
+                <h2>Alguma duvida?</h2>
+            <div class="card-footer">
+                <button class="button">Fale com o suporte</button>
+            </div>
+        </div>
+        <div class="pb-4"></div>
+    </div>
+</div>
+</div>
+<script>
+    var va = 0;
+    var pm = 0;
+    var add = 0;
+
+    getEloData('Atual');
+
+    function getEloData(id) {
+        elElo = document.getElementById('selElo' + id);
+        fetch('ws-elo-coach/' + elElo.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheSelectDiv(data.divisoes, id);
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function getDivData(id) {
+        elElo = document.getElementById('selElo' + id);
+        elDiv = document.getElementById('selDiv' + id);
+        fetch('ws-elo-coach/' + elElo.value + '/' + elDiv.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function preencheValor(data, id) {
+        if (id === 'Des') {
+            //pegar valor do elo atual
+            vd = data.tempoGasto;
+        } else {
+            //pegar valor do elo desejado
+            va = data.tempoGasto;
+        }
+        //console.log(data);
+        //pegar a taxa
+        pm = data.valPorMinuto
+
+        atualizaValor();
+    }
+
+    function atualizaValor() {
+        //calcula (vd - va) * tax  
+        var total = va * pm;
+        total = total * verificaCheckados();
+        if (total < 0) {
+            total = 0;
+        }
+        document.getElementById("custo").innerHTML = "R$ " + total.toFixed(2);
+
+
+        var eloAtual = document.getElementById('selEloAtual').value;
+        var divAtual = document.getElementById('selDivAtual').value;
+
+        var elosResumo = eloAtual + ' ' + divAtual + ' ';
+        document.getElementById('resumoElos').textContent = elosResumo;
+
+
+        var adicionaisSelecionados = document.querySelectorAll('input[type=checkbox]:checked');
+        var adicionaisResumo = ' ';
+        for (var i = 0; i < adicionaisSelecionados.length; i++) {
+            var adicionalNome = adicionaisSelecionados[i].parentNode.textContent.trim().split('(')[0].trim();
+            adicionaisResumo += adicionalNome + '<br>';
+        }
+        adicionaisResumo = adicionaisResumo.slice(0, -2);
+        document.getElementById('resumoAdicionais').innerHTML = adicionaisResumo;
+
+
+
+    }
+
+    function preencheImg(img, id) {
+        el = document.getElementById('imgElo' + id);
+        el.src = img;
+    }
+
+    function preencheSelectDiv(divisoes, id) {
+        elDiv = document.getElementById('selDiv' + id);
+        elDiv.innerHTML = '';
+        for (let i = 0; i < divisoes.length; i++) {
+            elDiv.innerHTML += '<option value="' + divisoes[i] + '">' + divisoes[i] + '</option>';
+        }
+        if (divisoes.length == 1) {
+            elDiv.classList.add("d-none");
+        } else {
+            elDiv.classList.remove("d-none");
+        }
+    }
+
+    function verificaCheckados() {
+        var checks = document.querySelectorAll('input[type=checkbox]:checked');
+        var total = 1;
+        for (var i = 0; i < checks.length; i++) {
+            total += (parseFloat(checks[i].value) / 100);
+        }
+        return total;
+    }
+
+
+</script>
+{% endblock %}
