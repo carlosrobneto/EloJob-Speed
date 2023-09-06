@@ -59,6 +59,7 @@ def wsMd5(elo_selecionado, div_sel):
 
     return '{"divisoes":' + json.dumps(divs) + ',"img":"' + img + '", "tempoGasto":' + str(tempoGasto) + ', "valPorMinuto": ' + str(valPorMinuto) + '}'
 
+
 @app.route('/lol/ws-preco/<seu_elo>/<elo_desejado>')
 def wsPrecoMD5(seu_elo, elo_desejado):
     valor = 0

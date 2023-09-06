@@ -105,7 +105,7 @@
 
     function getEloData(id) {
         elElo = document.getElementById('selElo' + id);
-        fetch('ws-elo/' + elElo.value)
+        fetch('ws-elo-md5/' + elElo.value)
             .then(function (response) {
                 return response.json();
             })
@@ -122,7 +122,7 @@
     function getDivData(id) {
         elElo = document.getElementById('selElo' + id);
         elDiv = document.getElementById('selDiv' + id);
-        fetch('ws-elo/' + elElo.value + '/' + elDiv.value)
+        fetch('ws-elo-md5/' + elElo.value + '/' + elDiv.value)
             .then(function (response) {
                 return response.json();
             })
@@ -135,9 +135,24 @@
             });
     }
 
+    function preencheValor(data, id) {
+        if (id === 'Des') {
+            //pegar valor do elo atual
+            vd = data.tempoGasto;
+        } else {
+            //pegar valor do elo desejado
+            va = data.tempoGasto;
+        }
+        //console.log(data);
+        //pegar a taxa
+        pm = data.valPorMinuto
+
+        atualizaValor();
+    }
+
     function atualizaValor() {
         //calcula (vd - va) * tax  
-        var total = (vd - va) * pm;
+        var total = va * pm;
         total = total * verificaCheckados();
         if (total < 0) {
             total = 0;
@@ -147,10 +162,8 @@
 
         var eloAtual = document.getElementById('selEloAtual').value;
         var divAtual = document.getElementById('selDivAtual').value;
-        var eloDes = document.getElementById('selEloDes').value;
-        var divDes = document.getElementById('selDivDes').value;
 
-        var elosResumo = eloAtual + ' ' + divAtual + ' ' + ' -> ' + eloDes + ' ' + divDes + ' ';
+        var elosResumo = eloAtual + ' ' + divAtual + ' ';
         document.getElementById('resumoElos').textContent = elosResumo;
 
 

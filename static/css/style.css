@@ -1,155 +1,91 @@
-.navbar .nav-link {
-    color: white;
+/* Menu */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
 }
 
-.navbar .nav-link.active {
-    color: rgb(0, 255, 242);
-    text-decoration: underline;
-}
-
-
-.sobreTitulo {
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    right: 40%;
-    text-align: center;
-    color: white;
-}
-
-img {
-    width: 100%;
-}
-
-.card-home {
-    margin: 10px;
-    padding: 15px;
-    min-width: 345px;
-    border: .12rem solid rgba(0, 0, 0, 0.356);
-    background-color: #fff;
-    border-radius: 5px;
-    text-align: center;
-    max-height: 320px;
-    min-height: 260px;
-}
-
-.sobreTxt {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-.card-sobre {
+.navbar {
+    background-color: #33333300;
+    padding: 15px 0;
     display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    max-width: 340px;
-    max-height: 305px;
-    min-height: 250px;
-    margin: 10px;
-    padding: 15px;
-    border: .12rem solid rgba(0, 0, 0, 0.356);
-    background-color: #fff;
-    border-radius: 5px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.spcTop {
-    margin-top: 40px;
+/* li-classes */
+
+.nav-2{
+    padding-top: 10px;
+}
+.nav-3{
+    padding-top: 20px;
+}
+.logo{
+    padding-top: 30px;
 }
 
-exp-add {
-    font-weight: 500;
-    color: #414141;
-    font-size: 14px;
-    margin-top: -15px;
-    margin-left: 18px;
-}
-
-.row-flash {
+.nav {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 15px;
-    border: .12rem solid rgba(0, 0, 0, 0.356);
-    background-color: #fff;
-    border-radius: 5px;
 }
 
-.container-options{
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 15px;
-    border: .12rem solid rgba(0, 0, 0, 0.356);
-    background-color: #fff;
-    border-radius: 5px;
+.nav li {
+    margin-right: 20px;
 }
 
-.row-total{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 10px;
-    padding: 15px;
-    border: .12rem solid rgba(0, 0, 0, 0.356);
-    background-color: #fff;
-    border-radius: 5px;
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.rodape {
-    color: white;
-    background-color: rgb(48, 48, 48);
-    max-height: 400px;
-    min-height: 300px;
+.nav a:hover {
+    background-color: #55555500;
 }
 
+/* Home-Page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #f0f0f0;
+}
 body {
     background: var(--body-bg-img) no-repeat center center fixed;
     background-size: cover;
 } 
-
-body.scroll-is--active {
-    overflow-y: initial;
-  }
-  body {
-    position: relative;
-    overflow: hidden;
-      overflow-y: hidden;
-    background-color: #fff;
-  }
-  body {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.71428571;
-    color: #222430;
-  }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-  }
-
-.m-Img {
-    margin-top: 15%;
-    margin-bottom: 21%;
+.centered-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.compra {
-    color: white;
-    background-color: rgb(55, 107, 204);
+.button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #9900ff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    border-color: #414141;
-    
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.valorCompra {
-    border-color: #414141;
-    border-radius: 10px;
+/* EloJob */
+
+.card{
+    background-color: #00000093;
+    color: white;
+    border-color: rgb(255, 0, 255);
+}
+
+.selecao-elo{
+    background-color: #00000093;
+    color: #fff;
+    border-color: rgb(255, 0, 255);
 }
