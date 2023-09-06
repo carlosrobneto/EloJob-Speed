@@ -152,31 +152,61 @@
             ]
         },
         {
+            "liga": "Esmeralda",
+            "ordem": 5,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 4360,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 5040,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 5720,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 6400,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                }
+            ]
+        },
+        {
             "liga": "Diamante",
             "ordem": 6,
             "divisoes": [
                 {
                     "nome": "4",
                     "subordem": 1,
-                    "min": 4360,
+                    "min": 7080,
                     "img": "/static/img/elos/Diamante4.webp"
                 },
                 {
                     "nome": "3",
                     "subordem": 2,
-                    "min": 5340,
+                    "min": 8060,
                     "img": "/static/img/elos/Diamante3.webp"
                 },
                 {
                     "nome": "2",
                     "subordem": 3,
-                    "min": 6440,
+                    "min": 9160,
                     "img": "/static/img/elos/Diamante2.webp"
                 },
                 {
                     "nome": "1",
                     "subordem": 4,
-                    "min": 8040,
+                    "min": 10760,
                     "img": "/static/img/elos/Diamante1.webp"
                 }
             ]
@@ -188,7 +218,7 @@
                 {
                     "nome": "",
                     "subordem": 1,
-                    "min": 10490,
+                    "min": 13210,
                     "img": "/static/img/elos/Mestre.webp"
                 }
             ]
