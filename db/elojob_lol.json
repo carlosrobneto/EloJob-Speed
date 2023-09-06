@@ -152,6 +152,36 @@
             ]
         },
         {
+            "liga": "Esmeralda",
+            "ordem": 1,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 70,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 140,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 210,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 280,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                }
+            ]
+        },
+        {
             "liga": "Diamante",
             "ordem": 6,
             "divisoes": [

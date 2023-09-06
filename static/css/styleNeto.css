@@ -76,3 +76,16 @@ body {
     cursor: pointer;
 }
 
+/* EloJob */
+
+.card{
+    background-color: #00000093;
+    color: white;
+    border-color: rgb(255, 0, 255);
+}
+
+.selecao-elo{
+    background-color: #00000093;
+    color: #fff;
+    border-color: rgb(255, 0, 255);
+}

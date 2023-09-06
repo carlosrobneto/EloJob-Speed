@@ -11,44 +11,44 @@
 <div>
     <div class="container">
         <div class="d-flex justify-content-evenly pt-3">
-            <div class="card border-info" style="width: 18rem;">
-                <div class="card-header text-center border-info">Seu Elo Atual</div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">Seu Elo Atual</div>
                 <div class="card-body">
                     <img id="imgEloAtual" src="" class="card-img-top" alt="alguma imagem">
                     <select id="selEloAtual" onchange="getEloData('Atual')"
-                        class="form-select form-select-lg mb-3 border-info" aria-label=".form-select-lg example">
+                        class="form-select form-select-lg mb-3 selecao-elo" aria-label=".form-select-lg example">
                         {% for elo in elos %}
                         <option value="{{ elo }}">{{ elo }}</option>
                         {% endfor %}
                     </select>
                     <select id="selDivAtual" onchange="getDivData('Atual')"
-                        class="form-select form-select-sm border-info" aria-label=".form-select-sm example">
+                        class="form-select form-select-sm selecao-elo" aria-label=".form-select-sm example">
 
                     </select>
                 </div>
             </div>
-            <div class="card border-info" style="width: 18rem;">
-                <div class="card-header text-center border-info">Seu Elo Desejado</div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">Seu Elo Desejado</div>
                 <div class="card-body">
                     <img id="imgEloDes" src="" class="card-img-top" alt="alguma imagem">
                     <select id="selEloDes" onchange="getEloData('Des')"
-                        class="form-select form-select-lg mb-3 border-info" aria-label=".form-select-lg example">
+                        class="form-select form-select-lg mb-3 selecao-elo" aria-label=".form-select-lg example">
                         {% for elo in elos %}
                         <option value="{{ elo }}">{{ elo }}</option>
                         {% endfor %}
                     </select>
-                    <select id="selDivDes" onchange="getDivData('Des')" class="form-select form-select-sm border-info"
+                    <select id="selDivDes" onchange="getDivData('Des')" class="form-select form-select-sm selecao-elo"
                         aria-label=".form-select-sm example">
                     </select>
                 </div>
             </div>
-            <div class="card border-info">
-                <div class="card-header text-center border-info">Resumo do pedido</div>
+            <div class="card">
+                <div class="card-header text-center">Resumo do pedido</div>
                 <div class="card-body">
                     <h4>Elos: <span id="resumoElos"></span></h4>
                     <h5>Adicionais:<br> <span id="resumoAdicionais"></span></h5>
                 </div>
-                <div class="card-footer text-center border-info">
+                <div class="card-footer text-center">
                     <h3>Total = <span id="custo"></span></h3>
                     <button class="btn btn-primary">Comprar</button>
                 </div>
@@ -56,8 +56,8 @@
         </div>
     </div>
     <div class="container mt-3">
-        <div class="card border-info">
-            <div class="card-header border-info">Opções Adicionais:</div>
+        <div class="card">
+            <div class="card-header">Opções Adicionais:</div>
             <div class="card-body">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -71,7 +71,7 @@
                         Flash no F
                     </label>
                 </div>
-                <div class="card-footer border-info">
+                <div class="card-footer">
                     {% for adicional in adicionais %}
                     <div class="form-check">
                         <input class="form-check-input" onclick="atualizaValor()" type="checkbox"
@@ -88,11 +88,11 @@
     </div>
 
     <div class="container mt-3 text-center">
-        <div class="card border-info">
-            <div class="card-header border-info">
+        <div class="card">
+            <div class="card-header">
                 <h2>Regras</h2>
             </div>
-            <div class="card-body border-info">
+            <div class="card-body">
                 <h5>* O Cliente não podera jogar Raqueadas (na fila do serviço solicitado) até
                     que o serviço seja concluido</h5>
                 <h5>* O Cliente não podera entrar na conta no momento que o serviço estiver sendo realizado</h5>
@@ -104,9 +104,9 @@
                     e o cliente sera notificado para ver se o valor sera devolvido ou ele pagara o valor da taxa.</h5>
                 <h5>* É necessario ter terminado a MD10 para solicitar o serviço</h5>
             </div>
-            <div class="card-footer border-info">
+            <div class="card-footer">
                 <h2>Alguma duvida?</h2>
-                <button class="btn btn-primary">Clique aqui e saiba mais</button>
+                <button class="button">Fale com o suporte</button>
             </div>
         </div>
         <div class="pb-4"></div>
