@@ -158,25 +158,25 @@
                 {
                     "nome": "4",
                     "subordem": 1,
-                    "min": 70,
+                    "min": 2713,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
                     "nome": "3",
                     "subordem": 2,
-                    "min": 140,
+                    "min": 3113,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
                     "nome": "2",
                     "subordem": 3,
-                    "min": 210,
+                    "min": 3513,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
                     "nome": "1",
                     "subordem": 4,
-                    "min": 280,
+                    "min": 3913,
                     "img": "/static/img/elos/Esmeralda.webp"
                 }
             ]
@@ -188,25 +188,25 @@
                 {
                     "nome": "4",
                     "subordem": 1,
-                    "min": 2718,
+                    "min": 4313,
                     "img": "/static/img/elos/Diamante4.webp"
                 },
                 {
                     "nome": "3",
                     "subordem": 2,
-                    "min": 3368,
+                    "min": 4963,
                     "img": "/static/img/elos/Diamante3.webp"
                 },
                 {
                     "nome": "2",
                     "subordem": 3,
-                    "min": 4068,
+                    "min": 5663,
                     "img": "/static/img/elos/Diamante2.webp"
                 },
                 {
                     "nome": "1",
                     "subordem": 4,
-                    "min": 4818,
+                    "min": 6413,
                     "img": "/static/img/elos/Diamante1.webp"
                 }
             ]
@@ -218,7 +218,7 @@
                 {
                     "nome": "",
                     "subordem": 1,
-                    "min": 5798,
+                    "min": 7393,
                     "img": "/static/img/elos/Mestre.webp"
                 }
             ]
@@ -230,7 +230,7 @@
                 {
                     "nome": "",
                     "subordem": 1,
-                    "min": 10498,
+                    "min": 12093,
                     "img": "/static/img/elos/Graomestre.webp"
                 }
             ]
@@ -242,7 +242,7 @@
                 {
                     "nome": "",
                     "subordem": 1,
-                    "min": 19748,
+                    "min": 21343,
                     "img": "/static/img/elos/Desafiante.webp"
                 }
             ]
