@@ -1,13 +1,32 @@
-<div class="navbar">
-    <ul class="nav">
-        <li><a href="/lol/elojob">EloJob</a></li>
-        <li class="nav-2"><a href="/lol/duoboost">DuoBoost</a></li>
-        <li class="nav-3"><a href="/contas">Contas</a></li>
-    </ul>
-    <a class="logo" href="/"><img style="width: 100%;" src="{{ url_for('static', filename='img/logo.png') }}" alt=""></a>
-    <ul class="nav">
-        <li class="nav-3"><a href="/lol/md5">MD5</a></li>
-        <li class="nav-2"><a href="/lol/vitorias">Vitórias</a></li>
-        <li><a href="/lol/coach">Coach</a></li>
-    </ul>
-</div>
+<nav class="navbar navbar-expand-lg navbar-dark navSit">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="EloJob Speed"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/lol/elojob">EloJob</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lol/duoboost">DuoBoost</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lol/md5">MD5</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/lol/vitorias">Vitórias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lol/coach">Coach</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contas">Contas</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
