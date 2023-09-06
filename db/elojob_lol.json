@@ -153,7 +153,7 @@
         },
         {
             "liga": "Esmeralda",
-            "ordem": 1,
+            "ordem": 6,
             "divisoes": [
                 {
                     "nome": "4",
@@ -183,7 +183,7 @@
         },
         {
             "liga": "Diamante",
-            "ordem": 6,
+            "ordem": 7,
             "divisoes": [
                 {
                     "nome": "4",
@@ -213,7 +213,7 @@
         },
         {
             "liga": "Mestre",
-            "ordem": 7,
+            "ordem": 8,
             "divisoes": [
                 {
                     "nome": "",
@@ -225,7 +225,7 @@
         },
         {
             "liga": "Grão-Mestre",
-            "ordem": 8,
+            "ordem": 9,
             "divisoes": [
                 {
                     "nome": "",
@@ -237,7 +237,7 @@
         },
         {
             "liga": "Desafiante",
-            "ordem": 9,
+            "ordem": 10,
             "divisoes": [
                 {
                     "nome": "",
