@@ -1,14 +1,15 @@
-
 {% extends "index.html" %}
 
-{% block titulo %} Contas Smurfs {% endblock %}
+{% block titulo %} Contas {% endblock %}
 
 {% block conteudo %}
-<style>
-    :root {
-        --body-bg-img: url("{{ url_for('static', filename='img/zed.webp') }}");
-    }
-</style>
-<h1>Local separado para vendas de contas</h1>
+
+<div class="centered-text" style="color: white;">
+    <h2>Este Lugar sera vendido contas, se quiser vender a sua entre em contato conosco por discord</h2>
+    <div class="row rHome">
+        <div class="col"><img style="width: 40px;" src="{{ url_for('static', filename='img/mail.png') }}" href="" alt="">Trabalhe conosco</div>
+        <div class="col"><img style="width: 40px;" src="{{ url_for('static', filename='img/disc.svg') }}" href="" alt="">Discord</div>
+    </div>
+</div>
 
 {% endblock %}
