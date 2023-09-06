@@ -1,0 +1,289 @@
+{
+    "valor_minuto": 0.1,
+    "elos": [
+        {
+            "liga": "Ferro",
+            "ordem": 1,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 70,
+                    "img": "/static/img/elos/Ferro4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 140,
+                    "img": "/static/img/elos/Ferro3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 210,
+                    "img": "/static/img/elos/Ferro2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 280,
+                    "img": "/static/img/elos/Ferro1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Bronze",
+            "ordem": 2,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 350,
+                    "img": "/static/img/elos/Bronze4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 440,
+                    "img": "/static/img/elos/Bronze3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 530,
+                    "img": "/static/img/elos/Bronze2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 620,
+                    "img": "/static/img/elos/Bronze1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Prata",
+            "ordem": 3,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 710,
+                    "img": "/static/img/elos/Prata4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 827,
+                    "img": "/static/img/elos/Prata3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 944,
+                    "img": "/static/img/elos/Prata2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 1061,
+                    "img": "/static/img/elos/Prata1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Ouro",
+            "ordem": 4,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 1178,
+                    "img": "/static/img/elos/Ouro4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 1328,
+                    "img": "/static/img/elos/Ouro3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 1478,
+                    "img": "/static/img/elos/Ouro2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 1628,
+                    "img": "/static/img/elos/Ouro1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Platina",
+            "ordem": 5,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 1778,
+                    "img": "/static/img/elos/Platina4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 2013,
+                    "img": "/static/img/elos/Platina3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 2248,
+                    "img": "/static/img/elos/Platina2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 2483,
+                    "img": "/static/img/elos/Platina1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Esmeralda",
+            "ordem": 6,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 2713,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 3113,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 3513,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 3913,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Diamante",
+            "ordem": 7,
+            "divisoes": [
+                {
+                    "nome": "4",
+                    "subordem": 1,
+                    "min": 4313,
+                    "img": "/static/img/elos/Diamante4.webp"
+                },
+                {
+                    "nome": "3",
+                    "subordem": 2,
+                    "min": 4963,
+                    "img": "/static/img/elos/Diamante3.webp"
+                },
+                {
+                    "nome": "2",
+                    "subordem": 3,
+                    "min": 5663,
+                    "img": "/static/img/elos/Diamante2.webp"
+                },
+                {
+                    "nome": "1",
+                    "subordem": 4,
+                    "min": 6413,
+                    "img": "/static/img/elos/Diamante1.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Mestre",
+            "ordem": 8,
+            "divisoes": [
+                {
+                    "nome": "",
+                    "subordem": 1,
+                    "min": 7393,
+                    "img": "/static/img/elos/Mestre.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Grão-Mestre",
+            "ordem": 9,
+            "divisoes": [
+                {
+                    "nome": "",
+                    "subordem": 1,
+                    "min": 12093,
+                    "img": "/static/img/elos/Graomestre.webp"
+                }
+            ]
+        },
+        {
+            "liga": "Desafiante",
+            "ordem": 10,
+            "divisoes": [
+                {
+                    "nome": "",
+                    "subordem": 1,
+                    "min": 21343,
+                    "img": "/static/img/elos/Desafiante.webp"
+                }
+            ]
+        }
+    ],
+    "adicionais": [
+        {
+            "cod": "vitExtra",
+            "nome": "Vitória extra",
+            "descricao": "Pós o Booster atingir o Elo desejado tera uma vitoria extra na conta",
+            "percent": 15
+        },
+        {
+            "cod": "entSup",
+            "nome": "Entrega Suprema",
+            "descricao": "Em vez da meta de uma divisão por dia o booster tera a meta de duas divisões por dia",
+            "percent": 30
+        },
+        {
+            "cod": "restHR",
+            "nome": "Restrição de horario",
+            "descricao": "Você escolhe o horario que o booster podera jogar na sua conta",
+            "percent": 25
+        },
+        {
+            "cod": "escRota",
+            "nome": "Escolha de Rota",
+            "descricao": "Escolha a rota que o booster jogara",
+            "percent": 10
+        },
+        {
+            "cod": "escChamp",
+            "nome": "Escolha de Campeões",
+            "descricao": "Escolha os 3 personagem que o booster jogara",
+            "percent": 10
+        },
+        {
+            "cod": "prioridade",
+            "nome": "PRIORIDADE",
+            "descricao": "Seu lugar na fila de espera da empresa sera como prioridade no inicio do serviço",
+            "percent": 20
+        }
+    ]
+}

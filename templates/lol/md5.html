@@ -1,0 +1,199 @@
+{% extends "index.html" %}
+
+{% block titulo %} MD5 {% endblock %}
+
+{% block conteudo %}
+<div class="row text-center" style="color: white;">
+    <h1>Bem vindo ao serviço de MD5</h1>
+</div>
+<div>
+    <div class="container">
+        <div class="d-flex justify-content-evenly pt-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">Seu ultimo Elo</div>
+                <div class="card-body">
+                    <img id="imgEloAtual" src="" class="card-img-top" alt="alguma imagem">
+                    <select id="selEloAtual" onchange="getEloData('Atual')"
+                        class="form-select form-select-lg mb-3 selecao-elo" aria-label=".form-select-lg example">
+                        {% for elo in elos %}
+                        <option value="{{ elo }}">{{ elo }}</option>
+                        {% endfor %}
+                    </select>
+                    <select id="selDivAtual" onchange="getDivData('Atual')"
+                        class="form-select form-select-sm selecao-elo" aria-label=".form-select-sm example">
+
+                    </select>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">Resumo do pedido</div>
+                <div class="card-body">
+                    <h4>Elos: <span id="resumoElos"></span></h4>
+                    <h5>Adicionais:<br> <span id="resumoAdicionais"></span></h5>
+                </div>
+                <div class="card-footer text-center">
+                    <h3>Total = <span id="custo"></span></h3>
+                    <button class="button">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div class="card">
+            <div class="card-header">Opções Adicionais:</div>
+            <div class="card-body">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Flash no D
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Flash no F
+                    </label>
+                </div>
+                <div class="card-footer">
+                    {% for adicional in adicionais %}
+                    <div class="form-check">
+                        <input class="form-check-input" onclick="atualizaValor()" type="checkbox"
+                            value="{{ adicional['percent'] }}" id="check{{ adicional['cod'] }}">
+                        <label class="form-check-label" for="check{{ adicional['cod'] }}">
+                            {{ adicional['nome'] }} (+{{ adicional['percent'] }}%)
+                            <p>{{ adicional['descricao'] }}</p>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3 text-center">
+        <div class="card">
+            <div class="card-header">
+                <h2>Regras</h2>
+            </div>
+            <div class="card-body">
+                <h5>* O Cliente não podera jogar Raqueadas (na fila do serviço solicitado) até
+                    que o serviço seja concluido</h5>
+                <h5>* O Cliente não podera entrar na conta no momento que o serviço estiver sendo realizado</h5>
+                <h5>* O prazo é de 1 dia por divisão mais um dia de garantia (quando não marcada a opção de "Entrega
+                    Suprema")
+                    mas normalmente o serviço é entregue antes deste 1 dia extra</h5>
+                <h5>* Caso esteja ganhando menos de 20 PDL e não tiver marcado a opção de MMR o serviço não sera
+                    iniciado
+                    e o cliente sera notificado para ver se o valor sera devolvido ou ele pagara o valor da taxa.</h5>
+                <h5>* É necessario ter terminado a MD10 para solicitar o serviço</h5>
+            </div>
+            <div class="card-footer">
+                <h2>Alguma duvida?</h2>
+                <button class="button">Fale com o suporte</button>
+            </div>
+        </div>
+        <div class="pb-4"></div>
+    </div>
+</div>
+</div>
+<script>
+    var va = 0;
+    var pm = 0;
+    var add = 0;
+
+    getEloData('Atual');
+
+    function getEloData(id) {
+        elElo = document.getElementById('selElo' + id);
+        fetch('ws-elo/' + elElo.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheSelectDiv(data.divisoes, id);
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function getDivData(id) {
+        elElo = document.getElementById('selElo' + id);
+        elDiv = document.getElementById('selDiv' + id);
+        fetch('ws-elo/' + elElo.value + '/' + elDiv.value)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                preencheImg(data.img, id);
+                preencheValor(data, id);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
+    function atualizaValor() {
+        //calcula (vd - va) * tax  
+        var total = (vd - va) * pm;
+        total = total * verificaCheckados();
+        if (total < 0) {
+            total = 0;
+        }
+        document.getElementById("custo").innerHTML = "R$ " + total.toFixed(2);
+
+
+        var eloAtual = document.getElementById('selEloAtual').value;
+        var divAtual = document.getElementById('selDivAtual').value;
+        var eloDes = document.getElementById('selEloDes').value;
+        var divDes = document.getElementById('selDivDes').value;
+
+        var elosResumo = eloAtual + ' ' + divAtual + ' ' + ' -> ' + eloDes + ' ' + divDes + ' ';
+        document.getElementById('resumoElos').textContent = elosResumo;
+
+
+        var adicionaisSelecionados = document.querySelectorAll('input[type=checkbox]:checked');
+        var adicionaisResumo = ' ';
+        for (var i = 0; i < adicionaisSelecionados.length; i++) {
+            var adicionalNome = adicionaisSelecionados[i].parentNode.textContent.trim().split('(')[0].trim();
+            adicionaisResumo += adicionalNome + '<br>';
+        }
+        adicionaisResumo = adicionaisResumo.slice(0, -2);
+        document.getElementById('resumoAdicionais').innerHTML = adicionaisResumo;
+
+
+
+    }
+
+    function preencheImg(img, id) {
+        el = document.getElementById('imgElo' + id);
+        el.src = img;
+    }
+
+    function preencheSelectDiv(divisoes, id) {
+        elDiv = document.getElementById('selDiv' + id);
+        elDiv.innerHTML = '';
+        for (let i = 0; i < divisoes.length; i++) {
+            elDiv.innerHTML += '<option value="' + divisoes[i] + '">' + divisoes[i] + '</option>';
+        }
+        if (divisoes.length == 1) {
+            elDiv.classList.add("d-none");
+        } else {
+            elDiv.classList.remove("d-none");
+        }
+    }
+
+    function verificaCheckados() {
+        var checks = document.querySelectorAll('input[type=checkbox]:checked');
+        var total = 1;
+        for (var i = 0; i < checks.length; i++) {
+            total += (parseFloat(checks[i].value) / 100);
+        }
+        return total;
+    }
+
+
+</script>
+{% endblock %}
