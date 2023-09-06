@@ -6,27 +6,33 @@
             "ordem": 1,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 70,
-                    "img": "/static/img/elos/Ferro4.webp"
+                    "min": 20,
+                    "img": "/static/img/elos/Ferro1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 140,
-                    "img": "/static/img/elos/Ferro3.webp"
+                    "min": 40,
+                    "img": "/static/img/elos/Ferro1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 210,
-                    "img": "/static/img/elos/Ferro2.webp"
+                    "min": 60,
+                    "img": "/static/img/elos/Ferro1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 280,
+                    "min": 80,
+                    "img": "/static/img/elos/Ferro1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 100,
                     "img": "/static/img/elos/Ferro1.webp"
                 }
             ]
@@ -36,27 +42,33 @@
             "ordem": 2,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 350,
-                    "img": "/static/img/elos/Bronze4.webp"
+                    "min": 25,
+                    "img": "/static/img/elos/Bronze1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 440,
-                    "img": "/static/img/elos/Bronze3.webp"
+                    "min": 50,
+                    "img": "/static/img/elos/Bronze1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 530,
-                    "img": "/static/img/elos/Bronze2.webp"
+                    "min": 75,
+                    "img": "/static/img/elos/Bronze1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 620,
+                    "min": 100,
+                    "img": "/static/img/elos/Bronze1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 125,
                     "img": "/static/img/elos/Bronze1.webp"
                 }
             ]
@@ -66,27 +78,33 @@
             "ordem": 3,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 710,
-                    "img": "/static/img/elos/Prata4.webp"
+                    "min": 35,
+                    "img": "/static/img/elos/Prata1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 827,
-                    "img": "/static/img/elos/Prata3.webp"
+                    "min": 70,
+                    "img": "/static/img/elos/Prata1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 944,
-                    "img": "/static/img/elos/Prata2.webp"
+                    "min": 105,
+                    "img": "/static/img/elos/Prata1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 1061,
+                    "min": 140,
+                    "img": "/static/img/elos/Prata1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 175,
                     "img": "/static/img/elos/Prata1.webp"
                 }
             ]
@@ -96,27 +114,33 @@
             "ordem": 4,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 1178,
-                    "img": "/static/img/elos/Ouro4.webp"
+                    "min": 40,
+                    "img": "/static/img/elos/Ouro1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 1328,
-                    "img": "/static/img/elos/Ouro3.webp"
+                    "min": 80,
+                    "img": "/static/img/elos/Ouro1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 1478,
-                    "img": "/static/img/elos/Ouro2.webp"
+                    "min": 120,
+                    "img": "/static/img/elos/Ouro1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 1628,
+                    "min": 160,
+                    "img": "/static/img/elos/Ouro1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 200,
                     "img": "/static/img/elos/Ouro1.webp"
                 }
             ]
@@ -126,27 +150,33 @@
             "ordem": 5,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 1778,
-                    "img": "/static/img/elos/Platina4.webp"
+                    "min": 65,
+                    "img": "/static/img/elos/Platina1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 2013,
-                    "img": "/static/img/elos/Platina3.webp"
+                    "min": 130,
+                    "img": "/static/img/elos/Platina1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 2248,
-                    "img": "/static/img/elos/Platina2.webp"
+                    "min": 195,
+                    "img": "/static/img/elos/Platina1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 2483,
+                    "min": 260,
+                    "img": "/static/img/elos/Platina1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 325,
                     "img": "/static/img/elos/Platina1.webp"
                 }
             ]
@@ -156,27 +186,33 @@
             "ordem": 6,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 2713,
+                    "min": 90,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 3113,
+                    "min": 180,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 3513,
+                    "min": 270,
                     "img": "/static/img/elos/Esmeralda.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 3913,
+                    "min": 360,
+                    "img": "/static/img/elos/Esmeralda.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 450,
                     "img": "/static/img/elos/Esmeralda.webp"
                 }
             ]
@@ -186,27 +222,33 @@
             "ordem": 7,
             "divisoes": [
                 {
-                    "nome": "4",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 4313,
-                    "img": "/static/img/elos/Diamante4.webp"
+                    "min": 120,
+                    "img": "/static/img/elos/Diamante1.webp"
                 },
                 {
-                    "nome": "3",
+                    "nome": "2 Vitórias",
                     "subordem": 2,
-                    "min": 4963,
-                    "img": "/static/img/elos/Diamante3.webp"
+                    "min": 240,
+                    "img": "/static/img/elos/Diamante1.webp"
                 },
                 {
-                    "nome": "2",
+                    "nome": "3 Vitórias",
                     "subordem": 3,
-                    "min": 5663,
-                    "img": "/static/img/elos/Diamante2.webp"
+                    "min": 360,
+                    "img": "/static/img/elos/Diamante1.webp"
                 },
                 {
-                    "nome": "1",
+                    "nome": "4 Vitórias",
                     "subordem": 4,
-                    "min": 6413,
+                    "min": 480,
+                    "img": "/static/img/elos/Diamante1.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 500,
                     "img": "/static/img/elos/Diamante1.webp"
                 }
             ]
@@ -216,9 +258,33 @@
             "ordem": 8,
             "divisoes": [
                 {
-                    "nome": "",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 7393,
+                    "min": 400,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "2 Vitórias",
+                    "subordem": 2,
+                    "min": 800,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "3 Vitórias",
+                    "subordem": 3,
+                    "min": 1200,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "4 Vitórias",
+                    "subordem": 4,
+                    "min": 1600,
+                    "img": "/static/img/elos/Mestre.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 2000,
                     "img": "/static/img/elos/Mestre.webp"
                 }
             ]
@@ -228,9 +294,33 @@
             "ordem": 9,
             "divisoes": [
                 {
-                    "nome": "",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 12093,
+                    "min": 1000,
+                    "img": "/static/img/elos/Graomestre.webp"
+                },
+                {
+                    "nome": "2 Vitórias",
+                    "subordem": 2,
+                    "min": 2000,
+                    "img": "/static/img/elos/Graomestre.webp"
+                },
+                {
+                    "nome": "3 Vitórias",
+                    "subordem": 3,
+                    "min": 3000,
+                    "img": "/static/img/elos/Graomestre.webp"
+                },
+                {
+                    "nome": "4 Vitórias",
+                    "subordem": 4,
+                    "min": 4000,
+                    "img": "/static/img/elos/Graomestre.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 5000,
                     "img": "/static/img/elos/Graomestre.webp"
                 }
             ]
@@ -240,9 +330,33 @@
             "ordem": 10,
             "divisoes": [
                 {
-                    "nome": "",
+                    "nome": "1 Vitória",
                     "subordem": 1,
-                    "min": 21343,
+                    "min": 2000,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "2 Vitórias",
+                    "subordem": 2,
+                    "min": 4000,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "3 Vitórias",
+                    "subordem": 3,
+                    "min": 6000,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "4 Vitórias",
+                    "subordem": 4,
+                    "min": 8000,
+                    "img": "/static/img/elos/Desafiante.webp"
+                },
+                {
+                    "nome": "5 Vitórias",
+                    "subordem": 5,
+                    "min": 10000,
                     "img": "/static/img/elos/Desafiante.webp"
                 }
             ]
