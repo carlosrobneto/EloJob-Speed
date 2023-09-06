@@ -67,11 +67,12 @@ body {
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+    padding: 10px 50px;
+    background-color: #9900ff;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
 }
+
